@@ -1,0 +1,16 @@
+services:
+  n1:
+    build: .
+    container_name: n1
+    command: ["-id", "n1", "-addr", ":8080", "-peers", "n2:8080,n3:8080"]
+    ports: ["8081:8080"]
+  n2:
+    build: .
+    container_name: n2
+    command: ["-id", "n2", "-addr", ":8080", "-peers", "n1:8080,n3:8080"]
+    ports: ["8082:8080"]
+  n3:
+    build: .
+    container_name: n3
+    command: ["-id", "n3", "-addr", ":8080", "-peers", "n1:8080,n2:8080"]
+    ports: ["8083:8080"]

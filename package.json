@@ -1,0 +1,9 @@
+{
+  "homepage": "https://dcho5.github.io/sharded_cache_cluster",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  }
+}
